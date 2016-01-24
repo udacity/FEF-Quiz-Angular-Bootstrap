@@ -1,0 +1,36 @@
+[{
+  "name": "Bootstrap Quiz",
+  "code": "jofjofjof",
+  "tests": [
+    {
+      "description": "legoBuilder script tag exists",
+      "definition": {
+        "nodes": "script",
+        "attribute": "src",
+        "equals": "scripts/legoBuilder.js",
+        "limit": 1
+      }
+    },
+    {
+      "description": "legoBuilder module has been created",
+      "definition": {
+        "waitForEvent": "legoBuilder-module-exists",
+        "exists": true
+      }
+    },
+    {
+      "description": "Angular is bootstrapped on the body tag",
+      "definition": {
+        "waitForEvent": "ngApp-used",
+        "exists": true
+      }
+    },
+    {
+      "description": "The legoBuilder module is used in the bootstrap",
+      "definition": {
+        "waitForEvent": "bootstrapped-legoBuilder",
+        "exists": true
+      }
+    }
+  ]
+}]
